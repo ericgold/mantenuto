@@ -7,14 +7,18 @@ const IncomingCall = (props) => {
       <ModalBody>
         {/* <div className='row justify-content-center'> */}
         {/* <div className='col-6'> */}
-        <h2 className='text-center'>{props.peer.username} is calling!</h2>
-        <h2 className='text-center'>...<i className={'fa fa-2x fa-phone'} /></h2>
+        <h2 className='text-center'>{props.peer.username} is in the room with you!</h2>
+        {/*<h2 className='text-center'>...<i className={'fa fa-2x fa-phone'} /></h2>*/}
         <div className='row'>
           <div className='col-6 text-success'>
-            <button onClick={props.acceptCall} className='btn btn-lg btn-success'>Accept?</button>
+            <button onClick={props.acceptCall} {/*className='btn btn-lg btn-success'*/}>
+              <img src="../assets/ic_accept_call.png" alt="accept call"/>
+            </button>
           </div>
           <div className='col-6 text-center'>
-            <button onClick={props.rejectCall} className='btn btn-lg btn-outline-danger'>Reject?</button>
+            <button onClick={props.rejectCall} {/*className='btn btn-lg btn-outline-danger'*/}>
+              <img src="../assets/ic_hangup.png" alt="reject call"/>
+            </button>
           </div>
         </div>
         {/* </div> */}
